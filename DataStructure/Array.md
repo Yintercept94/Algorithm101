@@ -10,4 +10,4 @@ An array is a collection of items stored at contiguous memory locations. The ide
 
 ## LeetCode Problems
 
-- [01. Two Sum](../Leetcode/Array/two_sum.py) - Easy
+- [01. Two Sum](../Leetcode/Array/two_sum_01.py) - Easy
