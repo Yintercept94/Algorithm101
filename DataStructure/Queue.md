@@ -45,6 +45,7 @@ my_queue.enqueue(3)
 print(my_queue.dequeue())  # Output: 1
 print(my_queue.front())    # Output: 2
 print(my_queue.is_empty()) # Output: False
+```
 
 ## Applications of Queues
 

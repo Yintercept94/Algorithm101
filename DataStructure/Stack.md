@@ -45,6 +45,7 @@ my_stack.push(3)
 print(my_stack.pop())  # Output: 3
 print(my_stack.peek()) # Output: 2
 print(my_stack.is_empty()) # Output: False
+```
 
 ## Applications of Stacks
 
