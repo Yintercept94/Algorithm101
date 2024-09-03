@@ -94,6 +94,35 @@ In-Order Traversal (Left, Root, Right) visits the nodes in this order:
 ```
 4 → 2 → 5 → 1 → 3
 ```
+#### Recursive Method
+
+```python
+def inorder_traversal(root):
+    if root:
+        inorder_traversal(root.left)   # Step 1: Traverse the left subtree
+        print(root.value, end=" ")     # Step 2: Visit the root node
+        inorder_traversal(root.right)  # Step 3: Traverse the right subtree
+```
+
+#### Iterative Method
+
+```python
+def inorder_traversal_iterative(root):
+    stack = []
+    current = root
+    result = []
+    
+    while current or stack:
+        while current:
+            stack.append(current)
+            current = current.left
+        
+        current = stack.pop()
+        result.append(current.value)
+        current = current.right
+    
+    return result
+```
 
 ### 2.2 Pre-Order Traversal (Root, Left, Right)
 
@@ -112,6 +141,37 @@ Pre-Order Traversal (Root, Left, Right) visits the nodes in this order:
 ```
 1 → 2 → 4 → 5 → 3
 ```
+#### Recursive Method
+
+```python
+def preorder_traversal(root):
+    if root:
+        print(root.value, end=" ")      # Step 1: Visit the root node
+        preorder_traversal(root.left)   # Step 2: Traverse the left subtree
+        preorder_traversal(root.right)  # Step 3: Traverse the right subtree
+```
+
+#### Iterative Method
+
+```python
+def preorder_traversal_iterative(root):
+    if not root:
+        return []
+    
+    stack = [root]
+    result = []
+    
+    while stack:
+        current = stack.pop()
+        result.append(current.value)
+        
+        if current.right:
+            stack.append(current.right)
+        if current.left:
+            stack.append(current.left)
+    
+    return result
+```
 
 ### 2.3 Post-Order Traversal (Left, Right, Root)
 
@@ -129,6 +189,41 @@ Post-Order Traversal (Left, Right, Root) visits the nodes in this order:
 
 ```
 4 → 5 → 2 → 3 → 1
+```
+#### Recursive Method
+
+```python
+def postorder_traversal(root):
+    if root:
+        postorder_traversal(root.left)   # Step 1: Traverse the left subtree
+        postorder_traversal(root.right)  # Step 2: Traverse the right subtree
+        print(root.value, end=" ")       # Step 3: Visit the root node
+```
+
+#### Iterative Method
+
+```python
+def postorder_traversal_iterative(root):
+    if not root:
+        return []
+    
+    stack1 = [root]
+    stack2 = []
+    result = []
+    
+    while stack1:
+        current = stack1.pop()
+        stack2.append(current)
+        
+        if current.left:
+            stack1.append(current.left)
+        if current.right:
+            stack1.append(current.right)
+    
+    while stack2:
+        result.append(stack2.pop().value)
+    
+    return result
 ```
 
 ### 2.4 Level-Order Traversal (Breadth-First)
