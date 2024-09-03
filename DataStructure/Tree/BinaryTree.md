@@ -345,9 +345,6 @@ def visualize_tree(root):
 ```
 
 ## 5. Example Problems and Solutions
-
-Here, you can include some common binary tree problems and their solutions. For example:
-
 ### 5.1 Problem: Maximum Depth of a Binary Tree
 
 ```python
@@ -373,3 +370,8 @@ def is_balanced(root):
     
     return check(root)[1]
 ```
+## LeetCode Problems
+
+- [144. Binary Tree Preorder Traversal](../Leetcode/DataStructure/Tree/binary_tree_preorder_traversal_144.py) - Easy
+- [145. Binary Tree Postorder Traversal](../Leetcode/DataStructure/Tree/binary_tree_postorder_traversal_145.py) - Easy
+- [94. Binary Tree Inorder Traversal](../Leetcode/DataStructure/Tree/binary_tree_inorder_traversal_94.py) - Easy
