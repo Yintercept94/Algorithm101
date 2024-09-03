@@ -17,8 +17,8 @@ A **Full Binary Tree** is one in which every node has either 0 or 2 children.
       1
      / \
     2   3
-   / \ / \
-  4  5 6  7
+   / \ 
+  4  5 
 ```
 
 #### 1.1.2 Perfect Binary Tree
