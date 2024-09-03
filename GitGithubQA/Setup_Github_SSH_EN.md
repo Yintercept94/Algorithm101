@@ -34,6 +34,7 @@ Then add your SSH private key to the ssh-agent:
 ssh-add ~/.ssh/id_ed25519
 ```
 
+Try to run above two step again if you suddenly got permission issues.
 ## 4. Add Your SSH Key to Your GitHub Account
 Copy the SSH key to your clipboard:
 
