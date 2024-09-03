@@ -31,8 +31,6 @@ A **Perfect Binary Tree** is a full binary tree in which all leaves are at the s
       2       3
      / \     / \
     4   5   6   7
-   / \ / \ / \ / \
-  8  9 10 11 12 13 14 15
 ```
 
 #### 1.1.3 Complete Binary Tree
