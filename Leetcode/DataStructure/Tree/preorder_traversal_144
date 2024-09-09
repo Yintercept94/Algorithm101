@@ -1,0 +1,35 @@
+#144. 二叉树的前序遍历
+# Easy
+# Topics: Tree
+#
+# https://leetcode.cn/problems/binary-tree-preorder-traversal/description/
+#
+# 给你二叉树的根节点 root ，返回它节点值的 前序 遍历。
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def preorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        #iteration method
+        stack=[]
+        lst=[]
+        node=root
+        while stack or node:
+            while node:
+                lst.append(node.val)
+                stack.append(node)
+                node=node.left
+            node=stack[-1]
+            del stack[-1]
+            node=node.right
+        return lst
+        
+        
